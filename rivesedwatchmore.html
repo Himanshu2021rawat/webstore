@@ -1,0 +1,2685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Watchmore</title>
+    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+
+<!-- //chatbot link -->
+    <link rel="stylesheet" href="chatbot/chat.css">
+    <link rel="stylesheet" href="chatbot/res.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+
+
+
+       <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+<style type="text/css">
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300&family=Roboto:wght@100&display=swap');
+
+  :root {
+  -bgcolor: #f5f5f5; 
+  --textcolor: white; 
+  --featurecolor: #ffb300;
+  --footertext: #ffb300; 
+}
+
+
+  
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Roboto';
+    font-weight: 600;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: var(--bgcolor);
+    color: var(--colortext);
+    overflow-x: hidden;
+  }
+  
+  .container-fluid {
+    width: 100%;
+    height: auto;
+    padding: 0px 0px 80px 0px;
+  }
+  
+  .container {
+    width: 1200px;
+    height: auto;
+    margin: auto;
+  }
+  
+  .container .search {
+    display: flex;
+    padding: 30px 0px;
+    justify-content: space-between;
+  }
+  
+  .container .search h1 {
+    letter-spacing: 3px;
+    display: inline-block;
+    border-bottom: 2px solid var(--featurecolor);
+    padding-bottom: 10px;
+  }
+  
+  .container .search input {
+    color: var(--featurecolor);
+    width: 60%;
+    padding: 5px 16px;
+    background: transparent;
+    border-bottom: 5px solid var(--featurecolor);
+    border-radius: 13px;
+    font-size: 20px;
+    text-transform: capitalize;
+    letter-spacing: 3px;
+    outline: none;
+  }
+  
+  .container .search input:hover {
+    border: 2px solid var(--featurecolor);
+    transition: 0.2s ease;
+  }
+  
+  .container .search input::placeholder {
+    font-weight: 500;
+  }
+  
+  .container .Product-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: left;
+    padding: 50px;
+  }
+  
+  .container .Product-list .product {
+    margin-top: 30px;
+    cursor: pointer;
+    padding: 20px;
+  }
+  
+  .container .Product-list .product img {
+    border-bottom: 10px solid var(--featurecolor);
+    border-radius: 33px;
+    padding: 23px;
+    height: 164px;
+    transition: 1s ease;
+  }
+  
+  .container .Product-list .product img:hover {
+    border: 3px solid var(--featurecolor);
+    transform: rotate(360deg);
+  
+  }
+  
+  .container .Product-list .product h3 {
+    padding-top: 5px;
+    letter-spacing: 2px;
+    font-size: 22px;
+    font-weight: 400;
+  }
+  
+  .container .Product-list .product h4 {
+    padding: 3px 0px;
+    color: var(--featurecolor);
+    font-weight: 700;
+    letter-spacing: 3px;
+  }
+  .category button {
+  font-size: 16px;
+  border-bottom: 6px solid var(--featurecolor);
+  margin: 5px 5px;
+  padding: 12px 20px;
+  background-color: var(--bgcolor);
+  color: var(--textcolor);
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.category button:hover {
+  background-color: var(--featurecolor);
+  color: var(--textcolor);
+  border-bottom: 6px solid var(--bgcolor);
+  transform: rotate(5deg);
+}
+
+.category h1 {
+  font-size: 42px;
+  text-align: center;
+  border-radius: 12px;
+  width: 95%;
+  margin-bottom: 18px;
+  cursor: pointer;
+  background-color: var(--bgcolor);
+  color: var(--textcolor);
+  padding: 12px;
+  transition: background-color 0.3s ease;
+
+}
+
+
+.category h1:hover {
+  background-color: var(--featurecolor);
+}
+
+
+
+
+
+  .imm {
+    width: 5%;
+    margin-left: 373px;
+    border-bottom: 3px solid var(--featurecolor);
+    border-radius: 11px;
+    animation: immanime 1s ease-in-out 1s infinite alternate-reverse;
+  }
+
+  @keyframes immanime {
+    
+    0%{
+        transform: rotate(10deg);
+    }
+    
+    100%{
+      transform: rotate(-10deg);
+      border-bottom: 2px solid  rgb(234, 15, 234);
+
+    }
+
+  }
+  
+  .fotter {
+    border-top: 4px solid var(--featurecolor);
+    padding: 39px;
+    text-align: center;
+  }
+  
+  .fotter a {
+    text-decoration: none;
+    margin-right: 89px;
+    font-size: 19px;
+    color: var(--footertext);
+    cursor: pointer;
+  }
+  
+  .fotter a:hover {
+    opacity: 0.9;
+    color: rgb(20, 220, 220);
+  }
+  
+  .socials h2 {
+    color: var(--colortext);
+    text-align: center;
+    margin-top: 43px;
+    font-size: 54px;
+    text-decoration: underline;
+    text-decoration-color: var(--featurecolor);
+    text-underline-offset: 9px;
+  }
+  
+  .socials a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: var(--footertext);
+    margin-top: 10px;
+    font-size: 24px;
+  }
+  
+  .socials a:hover {
+    opacity: 0.9;
+    color: rgb(20, 220, 220);
+  }
+  
+  .link {
+    padding: 7px;
+  }
+  
+  .swiper {
+    width: 80%;
+    height: 20%;
+    cursor: pointer;
+    margin-top: 52px;
+  }
+  
+  .swiper-slide {
+    border-radius: 12px;
+    text-align: center;
+    font-size: 18px;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .img_slider {
+    width: 500px;
+    margin-top: 12px;
+    padding: 21px;
+  }
+  
+  .websitename {
+    text-align: center;
+    font-size: 60px;
+    margin-left: 25%;
+    line-height: 85px;
+    font-weight: 400;
+    max-width: 623px;
+    color: var(--textcolor);
+    text-shadow: 0.1em 0.1em 0.2em black;
+  }
+
+
+  .wrapper .section .container {
+    margin-left: 10%;
+    margin: 30px;
+    background: rgba(6, 6, 6, 0.8);
+    padding: 50px;
+    line-height: 28px;
+    width: 96%;
+}
+.text{
+  margin-left: 33px;
+}
+  
+  @media (max-width: 768px) {
+  
+  .container {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .container .search input {
+    width: 100%;
+  }
+
+  .container .Product-list .product {
+    width: 100%;
+  }
+
+
+}
+
+
+
+
+
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+
+
+
+<!-- nav bar -->
+
+
+<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+   
+<div class="wrapper">
+  <div class="sidebar">
+    <div class="profile">
+      <h2 class="logoH">WEBSTORE</h2>
+      <h3>Himanshu Rawat </h3>
+      <p>Developer</p>
+    </div>
+    <ul>
+      <li>
+        <a href="index.html" class="active">
+          <span class="icon"><i class="fas fa-home"></i></span>
+          <span class="item">Home</span>
+        </a>
+      </li>
+      <li>
+        <a href="rivesedwatchmore.html">
+          <span class="icon"><i class="fas fa-search"></i></span>
+          <span class="item">WatchMore</span>
+        </a>
+      </li>
+      <li>
+        <a href="/DadJokes/jokes.html" target="_blank">
+          <span class="icon"><i class="fas fa-smile"></i></span>
+          <span class="item">Jokes:Laugh Here </span>
+        </a>
+      </li>
+      <li>
+        <a href="FeedBacks.html" target="_blank">
+          <span class="icon"><i class="fas fa-user-friends"></i></span>
+          <span class="item">FeedBacks</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="aboutus.html" target="_blank">
+          <span class="icon"><i class="fas fa-book"></i></span>
+          <span class="item">About Us</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="wheatherappusingapi/index.html" target="_blank">
+          <span class="icon"><i class="fas fa-sun"></i></span>
+          <span class="item">weather</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="icon"><i class="fas fa-star"></i></span>
+          <span class="item">Favourites</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="KeepNotes/index.html">
+          <span class="icon"><i class="fas fa-sticky-note"></i></span>
+          <span class="item">Keep Notes</span>
+        </a>
+      </li>
+
+    </ul>
+  </div>
+  <div class="section">
+    <div class="top_navbar">
+      <div class="hamburger">
+        <a href="#">
+          <i class="fas fa-bars"></i>
+        </a>
+      </div>
+    </div> 
+   <!-- nav bar -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- //chatbot begins -->
+
+
+
+
+  <!-- CHAT BAR BLOCK -->
+  <div class="chat-bar-collapsible">
+    <button id="chat-button" type="button" class="collapsible">Chat with us!
+        <i id="chat-icon" style="color: #fff;" class="fa fa-fw fa-comments-o"></i>
+    </button>
+
+    <div class="content">
+        <div class="full-chat-block">
+            <!-- Message Container -->
+            <div class="outer-container">
+                <div class="chat-container">
+                    <!-- Messages -->
+                    <div id="chatbox">
+                        <h5 id="chat-timestamp"></h5>
+                        <p id="botStarterMessage" class="botText"><span>Loading...</span></p>
+                    </div>
+
+                    <!-- User input box -->
+                    <div class="chat-bar-input-block">
+                        <div id="userInput">
+                            <input id="textInput" class="input-box" type="text" name="msg"
+                                placeholder="Tap 'Enter' to send a message">
+                            <p></p>
+                        </div>
+
+                        <div class="chat-bar-icons">
+                            <i id="chat-icon" style="color: crimson;" class="fa fa-fw fa-heart"
+                                onclick="heartButton()"></i>
+                            <i id="chat-icon" style="color: #333;" class="fa fa-fw fa-send"
+                                onclick="sendButton()"></i>
+                        </div>
+                    </div>
+
+                    <div id="chat-bar-bottom">
+                        <p></p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+<div class="websitename">WEBSTORE</div>
+
+
+    <div class="container-fluid">
+       
+             <!-- Swiper -->
+
+
+             <div class="swiper mySwiper">
+                
+            
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img  class="img_slider" src="images/instagram.jpg" alt="" srcset=""></div>
+                  <div class="swiper-slide"><img  class="img_slider" src="images/epic.jpg" alt="" srcset=""></div>
+                  <div class="swiper-slide"><img  class="img_slider" src="images/youtube.jpg" alt="" srcset=""></div>
+                  <div class="swiper-slide"><img  class="img_slider" src="images/whatsapp web.jpg" alt="" srcset=""></div>
+                  <div class="swiper-slide"><img  class="img_slider" src="images/zoro.png" alt="" srcset=""></div>
+                  <div class="swiper-slide"><img  class="img_slider" src="images/openai.jpg" alt="" srcset=""></div>
+                  <div class="swiper-slide"><img  class="img_slider" src="images/github-6980894_1280.png" alt="" srcset=""></div>
+                  <div class="swiper-slide"><img  class="img_slider" src="images/amazon prim.jpg" alt="" srcset=""></div>
+                  <div class="swiper-slide"><img  class="img_slider" src="images/netflix.jpg" alt="" srcset=""></div>
+                  <div class="swiper-slide"><img  class="img_slider" src="images/pirates bay.jpg" alt="" srcset=""></div>
+                  <div class="swiper-slide"><img  class="img_slider" src="images/uttorent.jpg" alt="" srcset=""></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+              </div>
+            
+           
+           
+           
+           
+           
+           
+           
+           
+              <!-- Swiper JS -->
+              <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+            
+              <!-- Initialize Swiper -->
+              <script>
+                var swiper = new Swiper(".mySwiper", {
+                  pagination: {
+                    el: ".swiper-pagination",
+                    type: "progressbar",
+                  },
+                  navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                  },
+                  
+                  // Add autoplay options for automatic sliding
+                  autoplay: {
+                    delay: 3000, // Adjust the delay between slides in milliseconds (ms)
+                    disableOnInteraction: false, // Allow the autoplay to continue even when the user interacts with the swiper
+                  },
+                  
+                  // Add additional options as needed
+                  speed: 2000, // Adjust the speed (duration) of the transition in milliseconds (ms)
+                  loop: true, // Enable looping of slides
+                });
+              </script>
+            
+              <!-- swiper end -->
+
+
+
+
+
+        <div class="container">
+            <div class="search">
+
+                <img class="imm" src="images/search.png" alt="search icon">
+                <input type="text" namr="" id="find" placeholder="search Website here....."onkeyup="search()">
+
+            </div>
+
+
+
+
+
+
+            
+            <div class="category"><h1>
+                Categories Of The WEBSTORE</h1>
+
+            
+                <a href="#"> <button>All </button></a>
+                <a href="socialmedia.html" target="_blank"> <button>Social Media </button></a>
+                <a href="foodservices.html" target="_blank"> <button>Food Services </button></a>
+                <a href="government.html" target="_blank"> <button>Government </button></a>
+                <a href="music.html" target="_blank"> <button>Music </button></a>
+                <a href="ecommerce.html" target="_blank"> <button>E-commerce </button></a>
+                <a href="ai.html" target="_blank"> <button>Artificial Intelligence </button></a>
+                <a href="healthcare.html" target="_blank"> <button>Healthcare </button></a>
+                <a href="automobile.html" target="_blank"> <button>Automobile </button></a>
+                <a href="gaming.html" target="_blank"> <button>Gaming </button></a>
+                <a href="fashion.html" target="_blank"> <button>Fashion </button></a>
+                <a href="education.html" target="_blank"> <button>Education </button></a>
+                <a href="sports.html" target="_blank"> <button>Sports </button></a>
+                <a href="travel.html" target="_blank"> <button>Travel </button></a>
+                <a href="technology.html" target="_blank"> <button>Technology </button></a>
+                <a href="entertainment.html" target="_blank"> <button>Entertainment </button></a>
+                <a href="beauty.html" target="_blank"> <button>Beauty and Welness </button></a>
+                <a href="news.html" target="_blank"> <button>News </button></a>
+                <a href="rivesedwatchmore.html"> <button>&#43;</button></a>
+          
+            
+        </div>
+
+
+  
+              
+
+<!-- social media -->
+
+        <div class="Product-list">
+          <div class="product">
+            <a class="dataofusernavigation" href="https://www.instagram.com/?hl=en" target="_blank">
+              <img src="images/instagram.jpg">
+            </a>
+            <div class="text">
+              <h3 class="webname">Instagram</h3>
+              <h4 class="isfav">Favourite<span class="icon"><i class="fas fa-star favvv" style="color: rgb(255, 255, 255); margin-left: 20px;" onclick="change(this)"></i></span></h4>
+              <h4 class="webcategory">social-media</h4>
+            
+            </div>
+          </div>
+          
+        
+     
+          <div class="product">
+            <a  href="https://www.google.com/?hl=en" target="_blank">
+              <img src="https://consumerfed.org/wp-content/uploads/2021/06/Antitrust-Privacy-Internet-Google-1024x683.jpg">
+            </a>
+            <div class="text">
+              <h3 class="webname">Google</h3>
+              <h4 class="isfav">Favourite<span class="icon"><i class="fas fa-star favvv" style="color: rgb(255, 255, 255); margin-left: 20px;" onclick="change(this)"></i></span></h4>
+              <h4 class="webcategory">Search Engine</h4>
+            
+            </div>
+          </div>
+          
+        
+     
+        
+             
+          <div class="product">
+            <a href="https://www.linkedin.com"> <img src="https://wallpaperaccess.com/full/2068758.jpg" alt=""></a>
+            <div class="text">
+                <h3>LinkedIn</h3>
+                <h4>Favourite<span class="icon"><i class="fas fa-star" style="color: rgb(255, 255, 255); margin-left: 20px;" onclick="change(this)"></i></span></h4>
+                <h4>Social Media</h4>
+            </div>
+        </div>
+
+                <div class="product">
+                  <a href="https://web.whatsapp.com/" target="_blank"><img src="images/whatsapp web.jpg"></a>
+                    <div class="text">
+                      <h3>Whatsapp-web</h3>
+                      <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this )"></i></span></h4>
+                      <h4>social-media</h4>
+                    </div>
+                </div> 
+                <div class="product">
+
+                    <a href="https://www.twitter.com" target="_blank"><img src="images/twitter.jpg"></a>
+                    <div class="text">
+                      <h3>Twitter</h3>
+                      <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"   onclick="change(this)"></i></span></h4>
+                      <h4>social-media</h4>
+                    </div>
+                </div>
+               
+               
+                <div class="product">
+
+                  <a href="https://www.reddit.com/login/" target="_blank"><img src="images/reddit-6615447.png"></a>
+                  <div class="text">
+                    <h3>Reddit</h3>
+                    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color: rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+                    <h4>social-media</h4>
+                  </div>
+
+              </div>
+              <div class="product">
+                <a href="https://www.pinterest.com"><img src="https://th.bing.com/th/id/OIP.sug_ywstjYSjqHK_BTpeYwHaEK?w=300&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt=""></a>
+                  <div class="text">
+                      <h3>Pinterest</h3>
+                      <h4>Favourite<span class="icon"><i class="fas fa-star" style="color: rgb(255, 255, 255); margin-left: 20px;" onclick="change(this)"></i></span></h4>
+                      <h4>Social Media</h4>
+                  </div>
+              </div>
+              
+             
+              
+              <div class="product">
+                <a href="https://www.snapchat.com">  <img src="https://th.bing.com/th/id/OIP.SdCBiUHz5dhBq0v3JLlj0AHaEK?pid=ImgDet&rs=1" alt=""></a>
+                  <div class="text">
+                      <h3>Snapchat</h3>
+                      <h4>Favourite<span class="icon"><i class="fas fa-star" style="color: rgb(255, 255, 255); margin-left: 20px;" onclick="change(this)"></i></span></h4>
+                      <h4>Social Media</h4>
+                  </div>
+              </div>
+                
+
+
+              <div class="product">
+
+                <a href="https://github.com/" target="_blank"> <img src="/images/github-6980894_1280.png" alt=""></a>
+                  <div class="text">
+                    <h3>Git-hub</h3>
+                    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+                    <h4>Social Media</h4>
+                  </div>
+              </div>
+
+               
+               
+                <div class="product">
+
+                    <a href="https://www.facebook.com/login.php/" target="_blank"><img src="images/facebook.jpg"></a>
+                    <div class="text">
+                      <h3>Facebook</h3>
+                      <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+                      <h4>social-media</h4>
+                    </div>
+
+                </div>
+
+                <div class="product">
+
+                    <a href="https://threadreaderapp.com/" target="_blank"><img src="https://th.bing.com/th/id/OIF.15u1V1rRtxBMbFgijgZdYQ?pid=ImgDet&rs=1"></a>
+                    <div class="text">
+                      <h3>Threads</h3>
+                      <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+                      <h4>social-media</h4>
+                    </div>
+
+                </div>
+
+                
+            <!-- social media -->  
+              
+
+            <!-- Entertainment platforms -->
+                <div class="product">
+
+                    <a href="https://www.netflix.com/in/login" target="_blank"><img src="images/netflixx.jpg"></a>
+                    <div class="text">
+                      <h3>Netflix</h3>
+                      <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+                      <h4>Entertainment</h4>
+                    </div>
+
+                </div>
+              
+              
+                <div class="product">
+
+                    <a href="https://zoro.to/home" target="_blank"><img src="images/zoro.png"></a>
+                    <div class="text">
+                      <h3>Zoro.to</h3>
+                      <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+                      <h4>Entertainment</h4>
+                    </div>
+
+                </div>
+              
+              
+                <div class="product">
+
+                    <a href="https://www.youtube.com/feed/trending?bp=6gQJRkVleHBsb3Jl" target="_blank"><img src="images/youtube.jpg"></a>
+                    <div class="text">
+                      <h3>Youtube</h3>
+                      <h4>Favourite<span class="icon"><i class="fas fa-star" style="color: rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+                      <h4>Entertainment</h4>
+                    </div>
+
+                </div>
+              
+                <div class="product">
+                  <a href="https://www.amazon.com/Amazon-Video/b?ie=UTF8&node=2858778011" target="_blank">  <img src="images/amazon prim.jpg" alt=""></a>
+                    <div class="text">
+                      <h3>Amazon</h3>
+                      <h4>Favourite<span class="icon"><i class="fas fa-star" style="color: rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+                      <h4>Entertainment</h4>
+                    </div>
+                </div> 
+               
+               
+               
+               
+                <div class="product">
+                  <a href="https://www.disneyplus.com/" target="_blank">  <img src="https://th.bing.com/th/id/OIP.VAQ-syF9zVyJ3nAIMHBbVwHaEK?pid=ImgDet&rs=1" alt=""></a>
+                    <div class="text">
+                      <h3>Disney+</h3>
+                      <h4>Favourite<span class="icon"><i class="fas fa-star" style="color: rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+                      <h4>Entertainment</h4>
+                    </div>
+                </div> 
+                <div class="product">
+                  <a href="https://www.hulu.com/" target="_blank">  <img src="https://th.bing.com/th/id/OIP.BepzKSJVM1LgU5efW2tH3gHaEK?pid=ImgDet&rs=1" alt=""></a>
+                    <div class="text">
+                      <h3>Hulu</h3>
+                      <h4>Favourite<span class="icon"><i class="fas fa-star" style="color: rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+                      <h4>Entertainment</h4>
+                    </div>
+                </div> 
+                <div class="product">
+                  <a href="https://www.hbomax.com/" target="_blank">  <img src="https://th.bing.com/th/id/OIP.qe-93OHKcL1miiOuU_IYmAHaEK?pid=ImgDet&rs=1" alt=""></a>
+                    <div class="text">
+                      <h3>HBO-max</h3>
+                      <h4>Favourite<span class="icon"><i class="fas fa-star" style="color: rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+                      <h4>Entertainment</h4>
+                    </div>
+                </div> 
+                <div class="product">
+                  <a href="https://www.apple.com/apple-tv-plus/" target="_blank">  <img src="https://www.imore.com/sites/imore.com/files/styles/large/public/field/image/2017/11/4k-apple-tv.jpg?itok=cBY_-FL8" alt=""></a>
+                    <div class="text">
+                      <h3>Apple TV +</h3>
+                      <h4>Favourite<span class="icon"><i class="fas fa-star" style="color: rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+                      <h4>Entertainment</h4>
+                    </div>
+                </div> 
+                <div class="product">
+                  <a href="https://www.crunchyroll.com/" target="_blank">  <img src="https://www.lifewire.com/thmb/MrcBYIq0et1d1865sT0F61qJ9gw=/2100x1400/filters:fill(auto,1)/crunchyrolllogo-5bf8230746e0fb0026652afe.jpg" alt=""></a>
+                    <div class="text">
+                      <h3>crunchyroll</h3>
+                      <h4>Favourite<span class="icon"><i class="fas fa-star" style="color: rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+                      <h4>Entertainment</h4>
+                    </div>
+                </div> 
+                <div class="product">
+                  <a href="https://www.funimation.com/" target="_blank">  <img src="https://logos-world.net/wp-content/uploads/2021/02/Funimation-Logo-2016-present.jpg" alt=""></a>
+                    <div class="text">
+                      <h3>Funanimation</h3>
+                      <h4>Favourite<span class="icon"><i class="fas fa-star" style="color: rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+                      <h4>Entertainment</h4>
+                    </div>
+                </div> 
+               
+              
+            <!-- Entertainment platforms -->
+
+
+              
+             
+                
+               
+                
+<!-- government -->
+
+<div class="product">
+
+  <a href="https://portal2.passportindia.gov.in/" target="_blank"><img src="https://static.toiimg.com/thumb/msid-64752489,width-1070,height-580,imgsize-332011,resizemode-75,overlay-toi_sw,pt-32,y_pad-40/photo.jpg" alt=""></a>
+    <div class="text">
+      <h3>Passport Seva</h3>
+      <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+      <h4>Government Website</h4>
+    </div>
+
+</div>
+
+
+<div class="product">
+
+  <a href="https://www.incometaxindia.gov.in/" target="_blank"><img src="https://fthmb.tqn.com/R6g3XDOAiKF0_9DlJIpGIkm4p-w=/864x576/filters:fill(auto,1)/2016-Federal-Tax-Rates-57a631ca3df78cf459194b33.png" alt=""></a>
+    <div class="text">
+      <h3>Income Tax Gov</h3>
+      <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+      <h4>Government Website</h4>
+    </div>
+
+</div>
+
+<div class="product">
+
+  <a href="https://www.gst.gov.in/" target="_blank"><img src="https://th.bing.com/th/id/OIP.2GPLULkBf7Rk1ByWPXPXXQHaEK?pid=ImgDet&rs=1" alt=""></a>
+    <div class="text">
+      <h3>Gst Gov</h3>
+      <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+      <h4>Government Website</h4>
+    </div>
+
+</div>
+
+<div class="product">
+
+  <a href="https://parivahan.gov.in/parivahan/" target="_blank"><img src="https://bgbooks.net/wp-content/uploads/2022/09/sarathi-parivahan-sewa.jpg" alt=""></a>
+    <div class="text">
+      <h3>Parivahan sarthi</h3>
+      <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+      <h4>Government Website</h4>
+    </div>
+
+</div>
+
+<div class="product">
+
+  <a href="https://mea.gov.in/consular-services.htm" target="_blank"><img src="https://studycafe.in/wp-content/uploads/2022/09/MEA.jpg" alt=""></a>
+    <div class="text">
+      <h3>Ministry of external affairs</h3>
+      <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+      <h4>Government Website</h4>
+    </div>
+
+</div>
+
+<div class="product">
+
+  <a href="https://uidai.gov.in/" target="_blank"><img src="https://i2.wp.com/aadhar-uidai.in/wp-content/uploads/2018/02/ghhhjh.png?fit=2000%2C1560&ssl=1" alt=""></a>
+    <div class="text">
+      <h3>Adharr Card</h3>
+      <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+      <h4>Government Website</h4>
+    </div>
+
+</div>
+
+<div class="product">
+
+  <a href="https://www.nvsp.in/" target="_blank"><img src="https://i1.wp.com/www.beautyofdurgapur.com/wp-content/uploads/2021/08/nvsp-portal-services.jpeg?fit=1280%2C720&ssl=1" alt=""></a>
+    <div class="text">
+      <h3>National voters Services</h3>
+      <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+      <h4>Government Website</h4>
+    </div>
+
+</div>
+
+<div class="product">
+
+  <a href="https://www.incometaxindiaefiling.gov.in/" target="_blank"><img src="https://cdn.newsnationtv.com/resize/730_-/images/2020/05/29/centralboardofdirecttaxescbdt-14.jpg" alt=""></a>
+    <div class="text">
+      <h3>Central board of income tax</h3>
+      <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+      <h4>Government Website</h4>
+    </div>
+
+</div>
+
+<div class="product">
+
+  <a href="https://www.mca.gov.in/" target="_blank"><img src="https://www.legaleraonline.com/wp-content/uploads/2019/11/Ministry-of-Corporate-Affairs-600x270.jpg" alt=""></a>
+    <div class="text">
+      <h3>Ministry of Corporate affairs</h3>
+      <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+      <h4>Government Website</h4>
+    </div>
+
+</div>
+
+<div class="product">
+
+  <a href="https://pmjay.gov.in/" target="_blank"><img src="https://th.bing.com/th/id/OIP.Aufu1Q2mjyzZRUMI8xD1uAHaE8?pid=ImgDet&rs=1" alt=""></a>
+    <div class="text">
+      <h3>National Health Authority</h3>
+      <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+      <h4>Government Website</h4>
+    </div>
+
+</div>
+
+
+
+
+<!-- government -->
+
+
+
+<!-- gaming platforms -->
+
+<div class="product">
+
+<a href="https://store.epicgames.com/en-US/" target="_blank"><img src="/images/epic.jpg" alt=""></a>
+  <div class="text">
+    <h3>Epic</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)" ></i></span></h4>
+    <h4>Gaming-website</h4>
+  </div>
+
+</div>
+
+<div class="product">
+
+<a href="https://store.steampowered.com/" target="_blank">  <img src="/images/steam.jpg" alt=""></a>
+  <div class="text">
+    <h3>Steam</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Gaming-website</h4>
+  </div>
+
+</div>
+
+
+
+
+
+
+<div class="product">
+
+<a href="https://www.gog.com/" target="_blank">  <img src="https://th.bing.com/th/id/OIP.04KbOpN_qpr5XwtNlTzBewHaD5?pid=ImgDet&rs=1" alt=""></a>
+  <div class="text">
+    <h3>GOG good old games</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Gaming-website</h4>
+  </div>
+
+</div>
+<div class="product">
+
+<a href="https://www.humblebundle.com/" target="_blank">  <img src="https://th.bing.com/th/id/OIP.lBO2-rWb9vIGk9Tf2lDMnAHaEK?w=287&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt=""></a>
+  <div class="text">
+    <h3>HumbleBundle</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Gaming-website</h4>
+  </div>
+
+</div>
+<div class="product">
+
+<a href="https://itch.io/" target="_blank">  <img src="https://th.bing.com/th/id/OIP.0_WvH8nFHMDufI3AHHNhjgHaEK?pid=ImgDet&rs=1" alt=""></a>
+  <div class="text">
+    <h3>Itch.io</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Gaming-website</h4>
+  </div>
+
+</div>
+<div class="product">
+
+<a href="https://www.ubisoft.com/en-gb/uplay" target="_blank">  <img src="https://th.bing.com/th/id/OIP.NhZ-IhjN40hwlCTq1IoYdwHaDx?pid=ImgDet&rs=1" alt=""></a>
+  <div class="text">
+    <h3>Ubisoft</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Gaming-website</h4>
+  </div>
+
+</div>
+<div class="product">
+
+<a href="https://www.microsoft.com/en-us/store/games" target="_blank">  <img src="https://th.bing.com/th/id/OIP.rXLQWSH8ZZKZRoCVbABrgwHaEl?pid=ImgDet&rs=1" alt=""></a>
+  <div class="text">
+    <h3>Microsoft Games</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Gaming-website</h4>
+  </div>
+
+</div>
+<div class="product">
+
+<a href="https://www.nintendo.com/eshop/" target="_blank">  <img src="https://th.bing.com/th/id/OIP.cO9rrS643rtLZqVjXoQfAwHaEK?pid=ImgDet&rs=1" alt=""></a>
+  <div class="text">
+    <h3>Nintendo E shop</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Gaming-website</h4>
+  </div>
+
+</div>
+<div class="product">
+
+<a href="https://store.playstation.com/" target="_blank">  <img src="https://images.thedirect.com/media/article_full/psnet.jpg" alt=""></a>
+  <div class="text">
+    <h3>Playstation</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Gaming-website</h4>
+  </div>
+
+</div>
+<div class="product">
+
+<a href="https://www.rockstargames.com/" target="_blank">  <img src="https://th.bing.com/th/id/OIP.sm8hTPathLbJ7jGKTRGnCAHaEK?pid=ImgDet&rs=1" alt=""></a>
+  <div class="text">
+    <h3>Rockstargames</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Gaming-website</h4>
+  </div>
+
+</div>
+            
+          
+<!-- gaming platforms -->
+
+
+<!-- artificial Intelligence -->
+
+
+<div class="product">
+
+  <a href="https://openai.com/" target="_blank"><img src="images/openai.jpg"></a>
+  <div class="text">
+    <h3>Open-AI</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>AI website</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href="https://www.pandora.com/" target="_blank"><img src="https://i.pinimg.com/originals/69/b5/2e/69b52e998e3c3d05854f22a02613894c.png" alt="Pandora"></a>
+  <div class="text">
+    <h3>Pandora</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>AI website</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href=" https://otter.ai" target="_blank"><img src="https://www.uctoday.com/wp-content/uploads/2020/04/Otter-Zoom-Transcription.jpg"></a>
+  <div class="text">
+    <h3>Otter.ai</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>AI website</h4>
+  </div>
+
+</div>
+<div class="product">
+
+
+
+  <a href=" https://zapier.com" target="_blank"><img src="https://th.bing.com/th/id/OIP.vhLMebBBzR3lnB3isw3NaAHaEK?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>Zapier</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>AI website</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href=" https://trello.com" target="_blank"><img src="https://i.pinimg.com/originals/81/7b/33/817b33c7821e1a241d7de68b1db76a3e.jpg"></a>
+  <div class="text">
+    <h3>Trello</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>AI website</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href="  https://www.crystalknows.com" target="_blank"><img src="https://th.bing.com/th/id/OIP.fHTkySJszS4OP6wWQDmz7AHaDt?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>CrystalKnows</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>AI website</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href="  https://x.ai" target="_blank"><img src="https://th.bing.com/th/id/OIP.XqKT_MKExGDgA2vdbAoLLAHaDe?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>X.ai</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>AI website</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href="https://www.wrike.com" target="_blank"><img src="https://uktechnews.co.uk/wp-content/uploads/2020/06/wrike.jpg"></a>
+  <div class="text">
+    <h3>Wrike</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>AI website</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href=" https://www.grammarly.com" target="_blank"><img src="https://th.bing.com/th/id/OIP.gXpYjFuZFbMcEliOEb6zKAHaE3?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>Grammarly</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>AI website</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href="  https://calendly.com" target="_blank"><img src="https://th.bing.com/th/id/OIP._jKc8uPebvb_nGVdoM_V4gHaEK?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>Calendly</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>AI website</h4>
+  </div>
+
+</div>
+
+
+<!-- artificial Intelligence -->
+
+
+
+
+<!-- Music websites -->
+
+
+<div class="product">
+
+  <a href="   https://www.spotify.com" target="_blank"><img src="https://th.bing.com/th/id/OIP._jKc8uPebvb_nGVdoM_V4gHaEK?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>Spotify</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Music Websites</h4>
+  </div>
+
+</div>
+
+
+<div class="product">
+
+  <a href="  https://www.apple.com/apple-music/" target="_blank"><img src="https://th.bing.com/th/id/OIP._jKc8uPebvb_nGVdoM_V4gHaEK?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>Apple Music</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Music Websites</h4>
+  </div>
+
+</div>
+
+
+<div class="product">
+
+  <a href=" https://soundcloud.com" target="_blank"><img src="https://www.nme.com/wp-content/uploads/2020/04/2020_soundcloudlogo_press_2000x1270.jpg"></a>
+  <div class="text">
+    <h3>SoundCloud</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Music Websites</h4>
+  </div>
+
+</div>
+
+
+<div class="product">
+
+  <a href=" https://music.youtube.com" target="_blank"><img src="https://cdn.wccftech.com/wp-content/uploads/2018/05/yt-music-2060x1082.png"></a>
+  <div class="text">
+    <h3>Youtube-Music</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Music Websites</h4>
+  </div>
+
+</div>
+
+
+<div class="product">
+
+  <a href="  https://www.deezer.com" target="_blank"><img src="https://th.bing.com/th/id/OIP.XrQm90Kd8mYfNXAuNgrNnwHaEZ?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>Deezer.com</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Music Websites</h4>
+  </div>
+
+</div>
+
+
+<div class="product">
+
+  <a href="  https://wynk.in/music" target="_blank"><img src="https://th.bing.com/th/id/OIP.uH8fxCoG4e1M9M3de3SpMQHaFO?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>Wync Music</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Music Websites</h4>
+  </div>
+
+</div>
+
+
+<div class="product">
+
+  <a href=" https://tidal.com/" target="_blank"><img src="https://th.bing.com/th/id/OIP.91nFRkadOFKDihPz3-uCJwHaEa?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>Tidal</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Music Websites</h4>
+  </div>
+
+</div>
+
+
+<div class="product">
+
+  <a href=" https://music.amazon.com/" target="_blank"><img src="https://th.bing.com/th/id/OIP.S0FyyQoVTjUtl9Vx-PAAbwHaEK?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>Amazon Music</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Music Websites</h4>
+  </div>
+
+</div>
+
+
+<div class="product">
+
+  <a href=" https://bandcamp.com/" target="_blank"><img src="https://th.bing.com/th/id/OIP.AuThJ5dnOij-o04BYp4fnQHaEo?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>BandCamp</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Music Websites</h4>
+  </div>
+
+</div>
+
+<div class="product">
+
+  <a href="  https://www.last.fm/" target="_blank"><img src="https://cdn0.vox-cdn.com/thumbor/Aut6dmnxhWXDzbBUXJ3GIhSUFp4=/0x68:1000x631/1600x900/cdn0.vox-cdn.com/uploads/chorus_image/image/30708815/last.fm_logo_red.0.jpg"></a>
+  <div class="text">
+    <h3>LastFm</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Music Websites</h4>
+  </div>
+
+</div>
+
+
+
+<!-- Music websites -->
+
+
+
+<!-- News websites -->
+
+<div class="product">
+
+  <a href="https://www.bbc.co.uk/news" target="_blank"><img src="https://th.bing.com/th/id/OIP.nDI62pBBArqcxvRY1s3FUwHaFd?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>BBC News</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>News Website</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href="https://www.cnn.com" target="_blank"><img src="https://th.bing.com/th/id/OIP.OFllhTjw9Fc_YJpLNPCFIgHaEK?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>CNN News</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>News Website</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href="https://www.nytimes.com" target="_blank"><img src="https://th.bing.com/th/id/OIP.5XThXmT2zMusFPbACYnsyAHaDb?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>Nytimes.com</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>News Websites</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href="https://www.theguardian.com" target="_blank"><img src="https://files.magzter.com/resize/magazine/1588175106/1594609480/view/3.jpg"></a>
+  <div class="text">
+    <h3>The guardian</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>News Websites</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href="https://www.reuters.com" target="_blank"><img src="https://th.bing.com/th/id/OIP.tdz2vsHxbvnCIwwlZCZasAHaDP?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>Reuters</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>News Websites</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href=" https://www.aljazeera.com" target="_blank"><img src="https://1000logos.net/wp-content/uploads/2020/08/Al-Jazeera-Logo.jpg"></a>
+  <div class="text">
+    <h3>Aljazeera</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>News Websites</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href="https://www.nbcnews.com" target="_blank"><img src="https://th.bing.com/th/id/OIP.NSbHd7ToUgCUnPyXlmmUNAHaD4?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>NBC News</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>News Websites</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href="https://apnews.com" target="_blank"><img src="https://i.ytimg.com/vi/eUuNd3FPgzA/maxresdefault.jpg"></a>
+  <div class="text">
+    <h3>Apnews</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>News Websites</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href=" https://www.foxnews.com" target="_blank"><img src="https://th.bing.com/th/id/OIP.4FMYjVPrlPzLtVqNA98UKgHaEK?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>Foxnews</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>News Websites</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href=" https://www.bloomberg.com" target="_blank"><img src="https://i0.wp.com/nypost.com/wp-content/uploads/sites/2/2020/02/bloomberg-1.jpg?quality=90&strip=all&ssl=1"></a>
+  <div class="text">
+    <h3>Bloomberg</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>News Websites</h4>
+  </div>
+
+</div>
+
+
+<!-- News websites -->
+
+
+
+<!-- Food service -->
+
+
+<div class="product">
+
+  <a href="https://www.ubereats.com" target="_blank"><img src="https://th.bing.com/th/id/OIP.NaiXy6tR4ncoXg0az1V_owHaEK?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>UberEats</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Food service</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href=" https://www.doordash.com" target="_blank"><img src="https://www.nrn.com/sites/nrn.com/files/styles/article_featured_retina/public/doordash-logo.gif?itok=1h0Hnk-l"></a>
+  <div class="text">
+    <h3>DoorDash</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Food service</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href=" https://www.grubhub.com" target="_blank"><img src="https://s3-eu-central-1.amazonaws.com/centaur-wp/designweek/prod/content/uploads/2016/04/19164349/GRUBHUB-01-B.jpg"></a>
+  <div class="text">
+    <h3>GrubHub</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Food service</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href="https://www.postmates.com" target="_blank"><img src="https://th.bing.com/th/id/OIP.DVobJSitPLOKKh_dOEhi6gHaE8?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>PostMates</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Food service</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href="https://www.seamless.com" target="_blank"><img src="https://th.bing.com/th/id/OIP.G5DuX2SUe_fdFovkW0spYgHaHa?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>Seamless</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Food service</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href="https://www.just-eat.com" target="_blank"><img src="https://th.bing.com/th/id/OIP._CUuS9WNMjFtOOCXwWhUQgHaEK?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>Just Eat</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Food service</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href="https://www.deliveroo.com" target="_blank"><img src="https://th.bing.com/th/id/OIP.qEcVQj5XwbRYxKwbNa_6yQHaD3?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>Deliveroo</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Food service</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href=" https://www.foodpanda.com" target="_blank"><img src="https://th.bing.com/th/id/OIP.S9SS6FD9iDjWZjtHGkW08gHaDw?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>Food Panda</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Food service</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href="https://www.zomato.com" target="_blank"><img src="https://1.bp.blogspot.com/-0VRrd81JXlA/YHk84zcrXrI/AAAAAAAAAI4/9enPRlUODWcEXBMjNwHpoAzvdQd__CyDwCLcBGAsYHQ/w1200-h630-p-k-no-nu/IMG-20210414-WA0013%2B%25281%2529.jpg"></a>
+  <div class="text">
+    <h3>Zomato</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Food service</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href="https://www.trycaviar.com" target="_blank"><img src="https://blog.sshop.ca/wp-content/uploads/2021/01/unnamed.jpg"></a>
+  <div class="text">
+    <h3>TRYCaviar</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Food service</h4>
+  </div>
+
+</div>
+
+
+<!-- Food service -->
+
+
+
+
+<!-- E-commerce Website -->
+
+<div class="product">
+
+  <a href="https://www.amazon.com" target="_blank"><img src="https://th.bing.com/th/id/OIP.JXDYGY_FJ7CblwB_5HFgigAAAA?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>Amazon.com</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>E-commerce Website</h4>
+  </div>
+
+</div>
+
+<div class="product">
+
+  <a href="https://www.ebay.com" target="_blank"><img src="https://fthmb.tqn.com/Vf3_CjuH1mv7aV-22knKiqdQeLU=/3000x1982/filters:fill(auto,1)/GettyImages-464399567-572aaabf3df78c038e605bc0.jpg"></a>
+  <div class="text">
+    <h3>Ebay</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>E-commerce Website</h4>
+  </div>
+
+</div>
+
+<div class="product">
+
+  <a href="https://www.walmart.com" target="_blank"><img src="https://th.bing.com/th/id/OIP.Gr7MAN4iOEvcZuYmBtqpvgHaE0?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>Walmart</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>E-commerce Website</h4>
+  </div>
+
+</div>
+
+<div class="product">
+
+  <a href=" https://www.target.com" target="_blank"><img src="https://th.bing.com/th/id/OIP.maoIZnWqVnpC9OXh4iCu9AHaE8?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>Target</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>E-commerce Website</h4>
+  </div>
+
+</div>
+
+<div class="product">
+
+  <a href="https://www.bestbuy.com" target="_blank"><img src="https://th.bing.com/th/id/OIP.p15YVB0xH9BhZdbGxtZdQwHaE7?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>Bestbuy</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>E-commerce Website</h4>
+  </div>
+
+</div>
+
+<div class="product">
+
+  <a href="https://www.alibaba.com" target="_blank"><img src="https://technode.com/wp-content/uploads/2018/01/gettyimages-535276330.jpg"></a>
+  <div class="text">
+    <h3>Alibaba</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>E-commerce Website</h4>
+  </div>
+
+</div>
+
+<div class="product">
+
+  <a href="https://www.flipkart.com" target="_blank"><img src="https://th.bing.com/th/id/OIP.dcJcFr4cUz_atJtnkBJOKQHaE8?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>Flipkart</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>E-commerce Website</h4>
+  </div>
+
+</div>
+
+<div class="product">
+
+  <a href=" https://www.etsy.com" target="_blank"><img src="https://th.bing.com/th/id/OIP.NiTB0bl2YulH6IDedauv5wAAAA?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>Etsy</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>E-commerce Website</h4>
+  </div>
+
+</div>
+
+<div class="product">
+
+  <a href="https://www.newegg.com" target="_blank"><img src="https://www.thefpsreview.com/wp-content/uploads/2020/12/newegg-logo.jpg"></a>
+  <div class="text">
+    <h3>NewEgg</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>E-commerce Website</h4>
+  </div>
+
+</div>
+
+<div class="product">
+
+  <a href="https://www.overstock.com" target="_blank"><img src="https://3.bp.blogspot.com/-xEdBsSBAxzE/WVPbCFFlyqI/AAAAAAAAhEc/JJ2EjZhDMYk0Uean15tTwboKBHXRNwZBwCK4BGAYYCw/s1600/Overstock.com%2B-%2BOverstock%2BMarket-782690.png"></a>
+  <div class="text">
+    <h3>Overstock</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>E-commerce Website</h4>
+  </div>
+
+</div>
+
+
+
+<!-- E-commerce Website -->
+
+
+<!-- Health care -->
+
+<div class="product">
+
+  <a href="https://www.mayoclinic.org/" target="_blank"><img src="https://th.bing.com/th/id/OIP.fCCLSBYByUM6axr9ew0N7QHaE4?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>Mayoclinic</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Health care</h4>
+  </div>
+
+</div>
+
+<div class="product">
+
+  <a href="https://www.mohfw.gov.in/" target="_blank"><img src="https://biospectrumindia.com/uploads/articles/health_ministry-10577.jpg"></a>
+  <div class="text">
+    <h3>Ministry of Health and Family</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Health care</h4>
+  </div>
+
+</div>
+
+<div class="product">
+
+  <a href="https://www.nhp.gov.in/" target="_blank"><img src="https://th.bing.com/th/id/OIP.ai4iHzQt0Y98yyAw3v5z9wHaDT?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>National Health Portal India</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Health care</h4>
+  </div>
+
+</div>
+
+<div class="product">
+
+  <a href="" target="_blank"><img src="https://th.bing.com/th/id/OIP.j-BKtXD_AvV1olm4evvlvgHaEB?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>Overstock</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Health care</h4>
+  </div>
+
+</div>
+
+<div class="product">
+
+  <a href="https://www.aiims.edu/" target="_blank"><img src="https://th.bing.com/th/id/OIP.QNxljGFzGbA8n3lomcVnSAHaEc?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>AIMS</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Health care</h4>
+  </div>
+
+</div>
+
+<div class="product">
+
+  <a href="https://www.apollohospitals.com/" target="_blank"><img src="https://th.bing.com/th/id/OIP.IjE3TXnSxoIKSsHywT6mDwHaEK?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>Apollo Hospitals</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Health care</h4>
+  </div>
+
+</div>
+
+<div class="product">
+
+  <a href=" https://www.fortishealthcare.com/" target="_blank"><img src="https://img.etimg.com/thumb/msid-60170587,width-1070,height-580,imgsize-67549,overlay-etmarkets/photo.jpg"></a>
+  <div class="text">
+    <h3>Fortis Health</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Health care</h4>
+  </div>
+
+</div>
+
+<div class="product">
+
+  <a href="https://www.manipalhospitals.com/" target="_blank"><img src="https://th.bing.com/th/id/OIP.ANTFMQrWxYhZQ99Veo5yDAHaFj?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>Manipal Hospitals</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Health care</h4>
+  </div>
+
+</div>
+
+<div class="product">
+
+  <a href="https://www.medanta.org/" target="_blank"><img src="https://www.franchiseindia.com/uploads/news/wi/medanta-8b7b036e61.jpg"></a>
+  <div class="text">
+    <h3>Medanta</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Health care</h4>
+  </div>
+
+</div>
+
+<div class="product">
+
+  <a href=" https://www.maxhealthcare.in/" target="_blank"><img src="https://th.bing.com/th/id/OIP.mLhdwezWrdZV9FtYGPkxiwAAAA?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>MaxHealth</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Health care</h4>
+  </div>
+
+</div>
+
+<!-- Health care -->
+
+
+
+<!-- Automobile -->
+<div class="product">
+
+  <a href=" https://www.cardekho.com/" target="_blank"><img src="https://images.yourstory.com/cs/wordpress/2014/08/CarDekho_FeaturedImage_YS.png?fm=png&auto=format"></a>
+  <div class="text">
+    <h3>CarDekho</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Automobile</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href="https://www.carwale.com/" target="_blank"><img src="https://imgd.aeplcdn.com/642x336/n/cw/ec/45673/exterior0.jpeg?art=1&q=85"></a>
+  <div class="text">
+    <h3>CarWale</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Automobile</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href=" https://www.zigwheels.com/" target="_blank"><img src="https://lh3.googleusercontent.com/-V82E-trNOzk/VL4bc9lF3vI/AAAAAAAA1U0/O3AOA2BRKto/s630-fcrop64=1,006d0000ffffffff/zw-googlepluscoverimage-20jan.jpg"></a>
+  <div class="text">
+    <h3>Zigwheels</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Automobile</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href="https://autoportal.com/" target="_blank"><img src="https://play-lh.googleusercontent.com/xqEKcncuvv0pknIAUzwXn2ldOMlMahejlRgB8Xg2Omm8yCBCJbKWFULCn-byOylIrLI"></a>
+  <div class="text">
+    <h3>Autoportal</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Automobile</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href="https://www.gaadi.com/" target="_blank"><img src="https://th.bing.com/th/id/OIP.UpLRqZba4rWG7zJAX3skugHaEK?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>Gaadi</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Automobile</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href="https://www.cartrade.com/" target="_blank"><img src="https://tneaonline.in/wp-content/uploads/2021/08/images-1-9.jpeg"></a>
+  <div class="text">
+    <h3>Cartrade</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Automobile</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href="https://www.drivespark.com/" target="_blank"><img src="https://cdn.dribbble.com/users/11781/screenshots/367972/dr_drivespark_logo.png"></a>
+  <div class="text">
+    <h3>Drivespark</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Automobile</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href="https://www.team-bhp.com/" target="_blank"><img src="https://www.team-bhp.com/forum/attachments/shifting-gears/1178233d1387018540-wallpapers-links-teambhp-logo-gradient.png"></a>
+  <div class="text">
+    <h3>TeamBHP</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Automobile</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href=" https://www.overdrive.in/" target="_blank"><img src="https://th.bing.com/th/id/OIP.YEwbyLYyxkAcGFKctxoMMQHaEK?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>Overdrive</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Automobile</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href="https://www.motorbeam.com/" target="_blank"><img src="https://i.ytimg.com/vi/L6uvOstDEDs/maxresdefault.jpg"></a>
+  <div class="text">
+    <h3>MotorBeam</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Automobile</h4>
+  </div>
+
+</div>
+
+
+<!-- Automobile -->
+
+
+
+
+<!-- Fashion -->
+
+<div class="product">
+
+  <a href="https://www.asos.com/" target="_blank"><img src="https://th.bing.com/th/id/OIP.5wYVzH_J-Ra95cXknGffeQHaEs?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>Asos</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Fashion</h4>
+  </div>
+
+</div>
+
+
+<div class="product">
+
+  <a href="https://www.zara.com/" target="_blank"><img src="https://i.pinimg.com/originals/6f/f2/99/6ff29939dd53418d7f43011f1c55f087.jpg"></a>
+  <div class="text">
+    <h3>Zara</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Fashion</h4>
+  </div>
+
+</div>
+
+<div class="product">
+
+  <a href="https://www2.hm.com/" target="_blank"><img src="https://th.bing.com/th/id/OIP.4_ET0QG-eUJacumLHT2MhwHaFC?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>H&M</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Fashion</h4>
+  </div>
+
+</div>
+
+<div class="product">
+
+  <a href="https://www.forever21.com/" target="_blank"><img src="https://th.bing.com/th/id/OIP.nxKU-3MqDnwCzEeh0tDCXwHaEK?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>Forever21</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Fashion</h4>
+  </div>
+
+</div>
+
+<div class="product">
+
+  <a href="https://www.nordstrom.com/" target="_blank"><img src="https://th.bing.com/th/id/OIP.nZhwQGNPc0GPrJpks-WJywHaFj?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>Nordstrom</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Fashion</h4>
+  </div>
+
+</div>
+
+<div class="product">
+
+  <a href="https://www.macys.com/" target="_blank"><img src="https://i.ytimg.com/vi/xeSyk5mBCsM/maxresdefault.jpg"></a>
+  <div class="text">
+    <h3>Macy's</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Fashion</h4>
+  </div>
+
+</div>
+
+<div class="product">
+
+  <a href="https://www.net-a-porter.com/" target="_blank"><img src="https://th.bing.com/th/id/OIP.Ax4uW6DZl1ntn7d8AgUIAwHaE7?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>Net-A-Porter</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Fashion</h4>
+  </div>
+
+</div>
+
+<div class="product">
+
+  <a href=" https://www.fashionnova.com/" target="_blank"><img src="https://omr.com/de/wp-content/uploads/2018/08/x712_Fashion-Nova-Homepage.jpg.pagespeed.ic.H2uv10FpJz.jpg"></a>
+  <div class="text">
+    <h3>Fashion Nova</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Fashion</h4>
+  </div>
+
+</div>
+
+<div class="product">
+
+  <a href="https://www.myntra.com/" target="_blank"><img src="https://th.bing.com/th/id/OIP.cyCP8BhGu2APuyRSb5_sywHaEK?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>Myntra</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Fashion</h4>
+  </div>
+
+</div>
+
+<div class="product">
+
+  <a href="https://www.ajio.com/" target="_blank"><img src="https://4.bp.blogspot.com/-mdhhs401vmU/Xs5hiGkNk9I/AAAAAAAAPUw/AUlSSiq45iIuQvavA7uAsG6X9fIpmzznwCLcBGAsYHQ/s1600/ajio-coupons-discount-offers.png"></a>
+  <div class="text">
+    <h3>Ajio</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Fashion</h4>
+  </div>
+
+</div>
+
+<!-- Fashion -->
+
+
+
+<!-- Educations -->
+
+<div class="product">
+
+  <a href="https://www.udemy.com/" target="_blank"><img src="https://about.udemy.com/wp-content/uploads/2016/07/about-default.png"></a>
+  <div class="text">
+    <h3>Udemy</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Education Websites</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href=" https://www.coursera.org/" target="_blank"><img src="https://1000logos.net/wp-content/uploads/2022/06/Coursera-Logo.png"></a>
+  <div class="text">
+    <h3>Coursera</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Education Websites</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href="https://unacademy.com/" target="_blank"><img src="https://blog.themediaant.com/wp-content/uploads/2020/04/Unacamdemy-1.png"></a>
+  <div class="text">
+    <h3>Unacademy</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Education Websites</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href="https://www.khanacademy.org/" target="_blank"><img src="https://th.bing.com/th/id/OIP.GjICKOTMh9ixeYb3573uMQHaD4?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>Khanacademy</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Education Websites</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href="https://www.simplilearn.com/" target="_blank"><img src="https://techstory.in/wp-content/uploads/2015/04/Simplilearn-Expands-Reach-into-South-East-Asia-by-Starting-Operations-in-Singapore.jpg"></a>
+  <div class="text">
+    <h3>Simplilearn</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Education Websites</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href="https://byjus.com/" target="_blank"><img src="https://th.bing.com/th/id/OIP._Xma0H1MAFIgmEWwreYBggHaD7?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>Byjust</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Education Websites</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href=" https://www.upgrad.com/" target="_blank"><img src="https://th.bing.com/th/id/OIP.iz1raiUSB7BTvuNAlw4U8AHaEA?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>Upgrad</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Education Websites</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href="https://www.vedantu.com/" target="_blank"><img src="https://th.bing.com/th/id/OIP.XkNFuSGvB9gJmNAwBotHMAHaDt?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>Vedantu</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Education Websites</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href=" https://www.toppr.com/" target="_blank"><img src="https://ssin24.com/wp-content/uploads/2021/07/2-13-768x480.jpg"></a>
+  <div class="text">
+    <h3>Toppr</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Education Websites</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href="https://www.greatlearning.in/" target="_blank"><img src="https://www.adgully.com/img/800/202103/great-learning-logo-with-virat.jpg"></a>
+  <div class="text">
+    <h3>GreatLearning</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Education Websites</h4>
+  </div>
+
+</div>
+
+
+
+
+
+<!-- Educations -->
+
+
+<!-- sports -->
+
+<div class="product">
+
+  <a href=" https://www.espnplus.com/" target="_blank"><img src="https://th.bing.com/th/id/OIP.Vt2Rb21BLjfzCHvPcYFR1gHaEE?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>Espnplus</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Sports Websites</h4>
+  </div>
+
+</div>
+
+<div class="product">
+
+  <a href="https://www.dazn.com/" target="_blank"><img src="https://techdaily.ca/wp-content/uploads/DAZN-REVIEW-1.png"></a>
+  <div class="text">
+    <h3>Dazn</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Sports Websites</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href="https://www.nbcsports.com/live" target="_blank"><img src="https://i.pinimg.com/originals/7f/0d/00/7f0d008b0c7c2a3dede65b3e8e8b4092.jpg"></a>
+  <div class="text">
+    <h3>NBCsports</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Sports Websites</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href="https://www.cbssports.com/live/" target="_blank"><img src="https://th.bing.com/th/id/OIP.vLH_2Gnc1-OxXoT-9Dvf-wHaEL?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>CBSsports</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Sports Websites</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href="https://www.fubo.tv/" target="_blank"><img src="https://th.bing.com/th/id/OIP.77JO8yBquwvTIOKYYUjQKQHaEK?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>Fubotv</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Sports Websites</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href="https://www.hotstar.com/in/sports" target="_blank"><img src="https://sportsmintmedia.com/wp-content/uploads/2021/09/Star-Sports-Hotstar-expected-to-rake-in-8500-crore-in-Ad-Revenue-2.jpg"></a>
+  <div class="text">
+    <h3>Hotstar</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Sports Websites</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href="https://www.sonyliv.com/sports" target="_blank"><img src="https://th.bing.com/th/id/OIP.KXg3gx00Bequ_TgqBx7fGQHaEU?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>SonyLiv</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Sports Websites</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href="https://www.skysports.com/watch" target="_blank"><img src="https://th.bing.com/th/id/OIP.EZErjMasM_kZF9ni113DTQHaFc?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>Skysports</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Sports Websites</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href="https://www.beinsports.com/" target="_blank"><img src="https://th.bing.com/th/id/OIP.DLu7oEMl6hPN4oZJqk7uIgHaEK?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>Beinsports</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Sports Websites</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href="https://www.eurosportplayer.com/" target="_blank"><img src="https://th.bing.com/th/id/OIP.G09bCMtlAGUBMzWNY7fNIgHaEK?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>Eurosportplayer</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Sports Websites</h4>
+  </div>
+
+</div>
+
+
+
+<!-- sports -->
+
+
+
+
+<!-- Travel -->
+
+<div class="product">
+
+  <a href="https://www.makemytrip.com/" target="_blank"><img src="https://www.reviewsxp.com/image/MakeMyTrip-logo.jpg"></a>
+  <div class="text">
+    <h3>Makemytrip</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Travel Websites</h4>
+  </div>
+
+</div>
+
+
+
+<div class="product">
+
+  <a href=" https://www.cleartrip.com/" target="_blank"><img src="https://th.bing.com/th/id/OIP.__vtCRPACpWXiWK6vPc3cgHaEO?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>ClearTrip</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Travel Websites</h4>
+  </div>
+
+</div>
+
+<div class="product">
+
+  <a href="https://www.yatra.com/" target="_blank"><img src="https://i1.wp.com/techlomedia.in/wp-content/uploads/2013/08/yatra.jpg"></a>
+  <div class="text">
+    <h3>Yatra</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Travel Websites</h4>
+  </div>
+
+</div>
+
+<div class="product">
+
+  <a href="https://www.goibibo.com/" target="_blank"><img src="https://gos3.ibcdn.com/og-goibibo-1614052912.png"></a>
+  <div class="text">
+    <h3>Goibibo</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Travel Websites</h4>
+  </div>
+
+</div>
+
+<div class="product">
+
+  <a href="https://www.ixigo.com/" target="_blank"><img src="https://th.bing.com/th/id/OIP.aRHf-UtUTSIUlrEdcQQdhQHaEA?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>Ixigo</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Travel Websites</h4>
+  </div>
+
+</div>
+
+<div class="product">
+
+  <a href="https://www.oyorooms.com/" target="_blank"><img src="https://th.bing.com/th/id/OIP.YwtGXuPBsoiCS2894g13xAHaE8?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>Oyorooms</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Travel Websites</h4>
+  </div>
+
+</div>
+
+<div class="product">
+
+  <a href="https://www.trivago.in/" target="_blank"><img src="https://loyaltylobby.com/wp-content/uploads/2019/09/Trivago-750x422.png"></a>
+  <div class="text">
+    <h3>Trivago</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Travel Websites</h4>
+  </div>
+
+</div>
+
+<div class="product">
+
+  <a href="https://www.easemytrip.com/" target="_blank"><img src="https://couponswala.com/blog/wp-content/uploads/2021/08/easemytrip-offers-1068x601.jpg"></a>
+  <div class="text">
+    <h3>Easemytrip</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Travel Websites</h4>
+  </div>
+
+</div>
+
+<div class="product">
+
+  <a href=" https://www.sotc.in/" target="_blank"><img src="https://th.bing.com/th/id/OIP.MpVOom-2kBBDNbIsBnIRywHaEo?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>Sotc</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Travel Websites</h4>
+  </div>
+
+</div>
+
+<div class="product">
+
+  <a href="https://www.agoda.com/" target="_blank"><img src="https://cdn10.agoda.net/images/mvc/default/agoda-logo-flat-2019.png"></a>
+  <div class="text">
+    <h3>Agoda</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Travel Websites</h4>
+  </div>
+
+</div>
+
+
+
+<!-- Travel -->
+
+
+<!-- technology -->
+
+
+<div class="product">
+
+  <a href="https://www.cnet.com/" target="_blank"><img src="https://th.bing.com/th/id/OIP.xjVbpipdouHLjlrWP3DZnwHaDg?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>CNET</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Technology</h4>
+  </div>
+
+</div>
+
+<div class="product">
+
+  <a href=" https://techcrunch.com/" target="_blank"><img src="https://th.bing.com/th/id/OIP.HEdD6iO3Rvf3ecC6XbFTrAHaDn?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>Techcrunch</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Technology</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href="https://www.theverge.com/" target="_blank"><img src="https://th.bing.com/th/id/OIP.MpcC47VQ4k7cHQCdol8NlAHaFG?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>TheVerge</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Technology</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href=" https://www.engadget.com/" target="_blank"><img src="https://techviral.net/wp-content/uploads/2018/10/Engadget-768x413.jpg"></a>
+  <div class="text">
+    <h3>Engadget</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Technology</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href=" https://gizmodo.com/" target="_blank"><img src="https://techviral.net/wp-content/uploads/2018/10/Gizmodo.jpg"></a>
+  <div class="text">
+    <h3>Gizmodo</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Technology</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href="https://www.wired.com/" target="_blank"><img src="https://th.bing.com/th/id/OIP.yeWMfJJasPp0tlc5Kx-9fgHaC7?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>Wired</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Technology</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href="https://www.tomshardware.com/" target="_blank"><img src="https://th.bing.com/th/id/OIP.xdQdrawSI4bVCdApWaGOGgHaEa?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>Tomshardware</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Technology</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href="https://www.techradar.com/" target="_blank"><img src="https://th.bing.com/th/id/OIP._CpTaoZ2VFzPW6cWPKXcdAHaEK?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>Techradar</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Technology</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href=" https://mashable.com/" target="_blank"><img src="https://th.bing.com/th/id/OIP.gBtGpZwZDZWCPy9oCC92wwHaEK?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>Mashable</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Technology</h4>
+  </div>
+
+</div>
+<div class="product">
+
+  <a href="https://www.digitaltrends.com/" target="_blank"><img src="https://th.bing.com/th/id/OIP.0EEYkinRYgZ1voaxNawOFAHaDx?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>Digitaltrends</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Technology</h4>
+  </div>
+
+</div>
+
+
+
+<!-- technology -->
+
+
+
+
+<!-- Beauty and wellness  -->
+
+
+<div class="product">
+
+  <a href="https://www.nykaa.com/" target="_blank"><img src="https://th.bing.com/th/id/OIP.5-SAPIyiSbLUIvhvndefhAHaEK?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>Nykaa</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Beauty and wellness</h4>
+  </div>
+
+</div>
+
+<div class="product">
+
+  <a href=" https://www.purplle.com/" target="_blank"><img src="https://colorlib.com/wp/wp-content/uploads/sites/2/purple-website-templates.jpg"></a>
+  <div class="text">
+    <h3>Purple</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Beauty and wellness</h4>
+  </div>
+
+</div>
+
+<div class="product">
+
+  <a href="https://healthandglow.com/" target="_blank"><img src="https://th.bing.com/th/id/OIP.Em1cYEZvaQv9puFoXYpBwQHaEj?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>Health and glow</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Beauty and wellness</h4>
+  </div>
+
+</div>
+
+<div class="product">
+
+  <a href=" https://www.vlccpersonalcare.com/" target="_blank"><img src="https://th.bing.com/th/id/OIP.AW3QM58wAFRD7M0cOqUd2QHaEA?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>Vlccpersonalcare</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Beauty and wellness</h4>
+  </div>
+
+</div>
+
+<div class="product">
+
+  <a href="https://www.forestessentialsindia.com/" target="_blank"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/c87eef9502181.560d54cf42729.jpg"></a>
+  <div class="text">
+    <h3>Forest essentials</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Beauty and wellness</h4>
+  </div>
+
+</div>
+
+<div class="product">
+
+  <a href="https://www.kamaayurveda.com/" target="_blank"><img src="https://th.bing.com/th/id/OIP.PokbMPAruHEhJvnbVKNDYQHaC9?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>Kamaayurveda</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Beauty and wellness</h4>
+  </div>
+
+</div>
+
+<div class="product">
+
+  <a href="https://www.fabindia.com/" target="_blank"><img src="https://th.bing.com/th/id/OIP.yQdPELkjWrXA2UlbOeCvgAHaFg?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>FabIndia</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Beauty and wellness</h4>
+  </div>
+
+</div>
+
+<div class="product">
+
+  <a href="https://justherbs.in/" target="_blank"><img src="https://th.bing.com/th/id/OIP.M-86FF1cKJsuYUVzh2rVjwHaFj?pid=ImgDet&rs=1"></a>
+  <div class="text">
+    <h3>JustHerbs</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Beauty and wellness</h4>
+  </div>
+
+</div>
+
+<div class="product">
+
+  <a href="https://www.myglamm.com/" target="_blank"><img src="https://customercarelife.com/wp-content/uploads/2021/04/MyGlamm-Customer-Care.jpg"></a>
+  <div class="text">
+    <h3>Myglamm</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Beauty and wellness</h4>
+  </div>
+
+</div>
+
+<div class="product">
+
+  <a href="https://in.sugarcosmetics.com/" target="_blank"><img src="https://images.the-captable.com/cs/158/735d6a1074d511ebaca05b4a4b51f248/shutterstock1501378343-1629871721013.png?fm=png&auto=format"></a>
+  <div class="text">
+    <h3>SugarCosmetics</h3>
+    <h4>Favourite<span class="icon"><i class="fas fa-star" style="color:  rgb(255, 255, 255); margin-left: 20px;"  onclick="change(this)"></i></span></h4>
+    <h4>Beauty and wellness</h4>
+  </div>
+
+</div>
+
+<!-- Beauty and wellness  -->
+
+
+            </div>
+        
+        </div>
+
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+    <div class="fotter">
+
+        <a href="index.html">Home</a>
+        <a href="#">About-us</a>
+        <a href="#">Contact</a>
+        <a href="#">Collaboration</a>
+        <a href="#">Services</a>
+        <a href="#">Team</a>
+  
+      
+
+
+    </div>
+    <div class="socials">
+
+     
+
+        <a href="#" class="fa fa-facebook link"> &nbsp;  Facebook</a>
+        <a href="#" class="fa fa-instagram link">&nbsp;Instagram</a>
+        <a href="#" class="fa fa-linkedin link"> &nbsp; Linkedin</a>
+        <a href="#" class="fa fa-whatsapp link"> &nbsp; Whatsapp</a>
+        <a href="#" class="fa fa-reddit link">   &nbsp;   Reddit</a>
+
+
+
+        <h2 >WebHStore</h2>
+
+        <span><p class="copyright">	&#169; copyright claimed by Himanshu Rawat, All rights reserved</p></span>
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- javascript -->
+
+
+<script type="text/javascript">
+
+
+// In summary, this function performs a search/filtering functionality based on the value entered in an input element. 
+// It compares the entered value with the content of <h3> elements within elements having the class "product". 
+//   It shows the matching elements and hides the non-matching ones based on the search result.
+
+
+
+    function search(){
+        let filter = document.getElementById('find').value.toUpperCase();
+        let item = document.querySelectorAll('.product');
+        let l = document.getElementsByTagName('h3');
+
+
+        for(var i = 0;i<=l.length;i++){
+            let a = item[i].getElementsByTagName('h3')[0];
+
+            let value = a.innerHTML || a.innerText || a.textContent;
+
+
+            if(value.toUpperCase().indexOf(filter) > -1){
+                item[i].style.display = "";
+            }else{
+                item[i].style.display = "none";
+            }
+        }
+
+
+
+
+
+
+    }
+
+
+</script>
+
+<script>
+
+function change(element) {
+  if (element.style.color === 'white') {
+    element.style.color = 'yellow';
+  } else {
+    element.style.color = 'white';
+  }
+}
+
+
+</script>
+
+
+
+
+
+
+
+<script src="dataretrivalofuser.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="nav.js"></script>
+<script src="chatbot/responses.js"></script>
+<script src="chatbot/chat.js"></script>
+
+
+</body>
+</html>

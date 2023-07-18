@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bgcolor : #FFF4F4;
+    --textcolor : #606C5D;
+}
+
+
+body {
+    font-family: 'Josefin Sans', 'Nunito', 'Quicksand', 'Recursive', Arial, sans-serif;
+    background-color:var(--bgcolor);
+    animation: backgroundcolorchange 10s ease 3s infinite;
+
+}
+
+@keyframes backgroundcolorchange {
+    0%{
+        background-color:var(--bgcolor);
+    }
+    25%{
+        background-color:#FFD0D0;
+    }
+    50%{
+        background-color:#FF9EAA;
+    }
+    75%{
+        background-color:#C1ECE4;
+    }
+    100%{
+        background-color:#FFF6F4;
+    }
+    
+}
+
+
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.heading {
+    width: 100%;
+    height: 33px;
+    color: var(--textcolor);
+    text-align: center;
+
+}
+
+#btn {
+    font-weight: 600;
+    color: var(--textcolor);
+    margin-left: 90%;
+    width: 140px;
+    padding: 12px;
+    outline: none;
+    border-radius: 12px;
+    background-color: transparent;
+    cursor: pointer;
+    animation: btnanime 10s ease 3s infinite alternate;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+@keyframes btnanime {
+
+    0%{
+
+        transform: translateX(0);
+
+
+    }
+    25%{
+        transform: rotate(10deg);
+        
+    }
+    50%{
+       transform: rotate(15deg);
+    }
+    75%{
+      
+        transform: rotate(30deg);
+    }
+    100%{
+        transform: translateX(-100px);
+        background-color: chocolate;
+        color: white;
+      
+
+    }
+    
+}
+
+.note {
+    height: 200px;
+    width: 310px;
+    border: 1px solid var(--textcolor);
+    background-color: transparent;
+    display: inline-block;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px var(--textcolor);
+    margin-top: 45px;
+}
+
+.operation {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 12px;
+    
+}
+
+.edit,
+.delete {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5em;
+    margin-left:229px;
+}
+
+.edit:hover,
+.delete:hover {
+    color: var(--textcolor);
+}
+
+
+
+#textarea {
+    width: 80%;
+    height: 61%;
+    margin-left: 12px;
+    background-color: transparent;
+    border: 2px solid var(--textcolor);
+    color: #630000;
+}
+
+#textarea::placeholder {
+    color: var(--textcolor);
+    opacity: 0.6; 
+}
+
+
+.main{
+    margin-top: 23px;
+    margin-left: 12px;
+    color: #630000;
+}
+
+.items{
+    margin-left: 245px;
+    display: inline-flex;
+
+}
+.items i {
+    font-size: 20px;
+    margin-left: 4px;
+}
+
+.hidden{
+    display: none;
+}

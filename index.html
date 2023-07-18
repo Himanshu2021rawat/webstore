@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="chatbot/chat.css">
+    <link rel="stylesheet" href="chatbot/res.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="song.css">
+     <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    
+    <title>WebHstore</title>
+
+
+<style>
+
+.swiper {
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      margin-top: 52px;
+
+    }
+
+    .swiper-slide {
+
+      border-radius: 12px;
+      text-align: center;
+    font-size: 18px;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .img_slider{
+      border: 2px solid black;
+     border-radius: 23px;
+     margin-top: 12px;
+     padding: 21px;
+    }
+
+
+
+
+    /* credit section css */
+    #credits {
+
+      border: 3px solid white;
+      margin-top: 280px;
+      padding: 20px;
+      background: #1a1a1a; /* Dark gray background color */      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    #credits h2 {
+      color: #ffffff;
+      text-decoration: underline;
+      text-decoration-color: rgb(200, 200, 54);
+      font-size: 24px;
+      margin-bottom: 20px;
+      margin-left: 30%;
+    }
+
+    #credits ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    #credits li {
+      margin-bottom: 10px;
+    }
+
+    #credits li a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    #credits li a:hover {
+      text-decoration: underline;
+    }
+
+
+
+
+</style>
+
+
+</head>
+
+<body>
+
+
+
+<!-- nav bar -->
+
+
+<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+   
+<div class="wrapper">
+  <div class="sidebar">
+    <div class="profile">
+      <h2 class="logoH">WEBSTORE</h2>
+      <h3>Himanshu Rawat </h3>
+      <p>Developer</p>
+    </div>
+    <ul>
+      <li>
+        <a href="#" class="active">
+          <span class="icon"><i class="fas fa-home"></i></span>
+          <span class="item">Home</span>
+        </a>
+      </li>
+      <li>
+        <a href="rivesedwatchmore.html" target="_blank">
+          <span class="icon"><i class="fas fa-search"></i></span>
+          <span class="item">WatchMore</span>
+        </a>
+      </li>
+      <li>
+        <a href="/DadJokes/jokes.html" target="_blank">
+          <span class="icon"><i class="fas fa-smile"></i></span>
+          <span class="item">Jokes:Laugh Here </span>
+        </a>
+      </li>
+      <li>
+        <a href="FeedBacks.html" target="_blank">
+          <span class="icon"><i class="fas fa-user-friends"></i></span>
+          <span class="item">FeedBacks</span>
+        </a>
+      </li>
+      <li>
+        <a href="aboutus.html" target="_blank">
+          <span class="icon"><i class="fas fa-book"></i></span>
+          <span class="item">About Us</span>
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="wheatherappusingapi/index.html" target="_blank">
+          <span class="icon"><i class="fas fa-sun"></i></span>
+          <span class="item">weather</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="icon"><i class="fas fa-star"></i></span>
+          <span class="item">Favourites</span>
+        </a>
+      </li>
+      <li>
+        <a href="KeepNotes/index.html" target="_blank">
+          <span class="icon"><i class="fas fa-sticky-note"></i></span>
+          <span class="item">Keep Notes</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="section">
+    <div class="top_navbar">
+      <div class="hamburger">
+        <a href="#">
+          <i class="fas fa-bars"></i>
+        </a>
+      </div>
+    </div>
+   <!-- nav bar -->
+
+    <!-- !--------------------------------------------------------------------------CHATBOT FROM HERE-----------------------------------------------------------------! -->
+
+    <!-- CHAT BAR BLOCK -->
+    <div class="chat-bar-collapsible">
+      <button id="chat-button" type="button" class="collapsible">Chat with us!
+          <i id="chat-icon" style="color: #fff;" class="fa fa-fw fa-comments-o"></i>
+      </button>
+
+      <div class="content">
+          <div class="full-chat-block">
+              <!-- Message Container -->
+              <div class="outer-container">
+                  <div class="chat-container">
+                      <!-- Messages -->
+                      <div id="chatbox">
+                          <h5 id="chat-timestamp"></h5>
+                          <p id="botStarterMessage" class="botText"><span>Loading...</span></p>
+                      </div>
+
+                      <!-- User input box -->
+                      <div class="chat-bar-input-block">
+                          <div id="userInput">
+                              <input id="textInput" class="input-box" type="text" name="msg"
+                                  placeholder="Type Here To Asq Questions&#128522;">
+                              <p></p>
+                          </div>
+
+                          <div class="chat-bar-icons">
+                              <i id="chat-icon" style="color: crimson;" class="fa fa-fw fa-heart"
+                                  onclick="heartButton()"></i>
+                              <i id="chat-icon" style="color: #333;" class="fa fa-fw fa-send" onclick="sendButton()"></i>
+                          </div>
+                      </div>
+
+                      <div id="chat-bar-bottom">
+                          <p></p>
+                      </div>
+
+                  </div>
+              </div>
+
+          </div>
+      </div>
+
+  </div>
+
+  <!-- !---------------------------------------------------------------------------CHARBOT TILL HERE-----------------------------------------------------------------! -->
+
+
+  <!-- !---------------------------------------------------------------------------HEADER CODER HERE-----------------------------------------------------------------! -->
+  <div class="header">
+      
+
+
+      <nav>
+        <h2 class="logoH">WEBSTORE</h2>
+          <div>
+              <button class="language-btn"><a href="index.html"  >Continue as Guest</a></button>
+              <button class="language-btn"><a href="/authentication/login.html" target="_blank">Login</a></button>
+              <button class="language-btn"><a href="/authentication/signup.html" target="_blank">SignUp</a></button>
+          </div>
+      </nav>
+
+
+     
+      <div class="header-content">
+
+          <h1>Discover Limitless Possibilities</h1>
+          <h3> Step into Our Webstore Wonderland Today</h3>
+         
+
+          <form action="" class="email-signup">
+              <input type="email" name="email"  id="" placeholder="Enter Your Email " required>
+              <button type="submit" onclick="registered()"> Get started</button>
+              
+              
+          </form>
+          <p style="color:black; font-weight:900; margin-top: 22px;">Ready to Click? Enter you email to create an account .</p>
+      </div>
+  </div>
+  <hr>
+
+  <!-- !---------------------------------------------------------------------------HEADER CODER TILL HERE-----------------------------------------------------------------! -->
+
+
+  <!-- !---------------------------------------------------------------------------FEATURE CODER HERE-----------------------------------------------------------------! -->
+
+
+  <div class="features">
+      <div >
+          <div style="margin-left: 80%; color: rgb(62 255 19); position: fixed;">	</div>    
+          <span id="time"></span>
+      
+      </div>
+      <h1>Unlock a Universe of Possibilities Explore Various Platforms Through Our Webstore</h1>
+
+
+      <!-- 1 row    -->
+      <div class="row">
+
+          <div class="text-col">
+              <h2>Embarking on an Exciting Journey to the Entertainment Platform </h2>
+              <p>
+                Unlock the ultimate entertainment experience through our webstore! Dive into a treasure trove of electrifying content, all at your fingertips. From blockbuster movies to an addictive TV series to pulse-pounding TV Shows , our webstore is a one-stop destination for all your entertainment cravings. Browse, discover, and indulge in a world of endless possibilities. Whether you're seeking thrills, laughter, or relaxation, our webstore has it all. Step into a digital paradise and let the magic unfold.</p>
+          </div>
+
+          <div class="img-col">
+              <a href="#" target="_blank"><img src="images/entertainment.jpg"></a>
+          </div>
+      </div>
+
+
+
+      <!-- 2 row    -->
+      <div class="row">
+
+          <div class="img-col">
+              <a href="#" target="_blank"><img src="images/socials.jpg"></a>
+          </div>
+
+
+          <div class="text-col">
+              <h2>Embrace the Social Media Revolution: Heading to the Ultimate Platform!</h2>
+              <p>"Discover a vibrant online community like no other through our webstore! Step into the world of social media and unlock a universe of connections, inspiration, and endless possibilities. Join millions of users who are shaping trends, sharing their passions, and connecting with like-minded individuals. From engaging discussions and captivating content to staying updated with friends and influencers, our webstore offers a seamless gateway to the exciting realm of social media. Don't miss out on the chance to be part of the conversation. Visit our webstore today and embark on a social media adventure that will broaden your horizons and enrich your online experience!</p>
+          </div>
+
+
+      </div>
+
+
+      <!-- 3 row    -->
+      <div class="row">
+
+          <div class="text-col">
+              <h2>Embracing the Power of Governance: Heading to the Government Platform</h2>
+              <p>"Unlock the power of government services and information through our webstore! Experience the convenience and efficiency of accessing official resources right at your fingertips. From obtaining vital documents and staying informed about policies to accessing helpful tools and services, our webstore is your gateway to a seamless government experience. Discover a world of transparency, accessibility, and empowerment as you engage with the comprehensive range of offerings. Take charge of your interactions with the government and visit our webstore today. Together, let's build a stronger, more connected community!"</p>
+          </div>
+
+          <div class="img-col">
+              <a href="#" target="_blank"><img src="images/govenment.jpg"></a>
+          </div>
+
+      </div>
+
+
+
+      <!-- 4 row    -->
+      <div class="row">
+
+
+          <div class="img-col">
+
+              <a href="#" target="_blank"><img src="images/music.jpg"></a>
+          </div>
+
+          <div class="text-col">
+              <h2>"Embracing the Power of Music: Heading to the Music Platform</h2>
+              <p>Immerse yourself in the enchanting world of music through our webstore! Explore a vast library of melodies, rhythms, and harmonies that will awaken your senses and touch your soul. From chart-topping hits to hidden gems across genres, our webstore offers an unparalleled collection of tunes to suit every mood and preference. Whether you're a music aficionado or a casual listener, our webstore is your key to discovering new artists, creating personalized playlists, and experiencing the magic of sound. Tune in, turn up the volume, and let the melodies transport you. Visit our webstore today and let the music take you on a captivating journey</p>
+          </div>
+
+
+
+      </div>
+      <!-- !---------------------------------------------------------------------------FEATURE CODER  TILL HERE-----------------------------------------------------------------! -->
+
+
+      <!-- !---------------------------------------------------------------------------WATCH MORE SECTION FROM HERE-----------------------------------------------------------------! -->
+
+      <div class="row5">
+
+          <div class="watchmore">
+
+              <a href="rivesedwatchmore.html " target="_blank">
+                  WatchMore
+              </a>
+
+               <!-- Swiper -->
+
+
+  <div class="swiper mySwiper">
+    <h1>Abundence of Platforms</h1>
+
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img  class="img_slider" src="images/grocerries.jpg" alt="" srcset=""></div>
+      <div class="swiper-slide"><img  class="img_slider" src="images/socialmedia.jpg" alt="" srcset=""></div>
+      <div class="swiper-slide"><img  class="img_slider" src="images/automobiles.jpg" alt="" srcset=""></div>
+      <div class="swiper-slide"><img  class="img_slider" src="images/tradding.jpg" alt="" srcset=""></div>
+      <div class="swiper-slide"><img  class="img_slider" src="images/hotel.jpg" alt="" srcset=""></div>
+      <div class="swiper-slide"><img  class="img_slider" src="images/taxi.jpg" alt="" srcset=""></div>
+      <div class="swiper-slide"><img  class="img_slider" src="images/restraunt.jpg" alt="" srcset=""></div>
+      <div class="swiper-slide"><img  class="img_slider" src="images/study.jpg" alt="" srcset=""></div>
+      <div class="swiper-slide"><img  class="img_slider" src="images/news.jpg" alt="" srcset=""></div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        type: "progressbar",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      
+      // Add autoplay options for automatic sliding
+      autoplay: {
+        delay: 3000, // Adjust the delay between slides in milliseconds (ms)
+        disableOnInteraction: false, // Allow the autoplay to continue even when the user interacts with the swiper
+      },
+      
+      // Add additional options as needed
+      speed: 2000, // Adjust the speed (duration) of the transition in milliseconds (ms)
+      loop: true, // Enable looping of slides
+    });
+  </script>
+
+  <!-- swiper end -->
+
+          </div>
+      </div>
+      <!-- !---------------------------------------------------------------------------WATCH MORE SECTION TILL HERE-----------------------------------------------------------------! -->
+     
+     
+
+
+ 
+    <!-- music section starts from here -->
+
+    <div class="sponser-section">
+
+<h1>Sponser Section HERE:</h1>
+
+    </div>
+
+    <div class="hero">
+
+      <div class="music">
+          <p>Artist:Biggie small</p>
+          <h2>Write this down</h2>
+          
+          
+
+<marquee behavior="scroll" direction="left" style="white-space: nowrap;"><span style="display: inline-block; margin-right: 10px; color: red; font-weight: bold;">&#9679;</span><span style="display: inline-block; margin-right: 10px; color: blue; font-weight: bold;">&#9679;</span><span style="display: inline-block; margin-right: 10px; color: green; font-weight: bold;">&#9679;</span><span style="display: inline-block; margin-right: 10px; color: orange; font-weight: bold;">&#9679;</span><span style="display: inline-block; margin-right: 10px; color: purple; font-weight: bold;">&#9679;</span><span style="display: inline-block; margin-right: 10px; color: yellow; font-weight: bold;">&#9679;</span><span style="display: inline-block; margin-right: 10px; color: pink; font-weight: bold;">&#9679;</span><span style="display: inline-block; margin-right: 10px; color: cyan; font-weight: bold;">&#9679;</span><span style="display: inline-block; margin-right: 10px; color: gold; font-weight: bold;">&#9679;</span><span style="display: inline-block; margin-right: 10px; color: gray; font-weight: bold;">&#9679;</span><span style="display: inline-block; margin-right: 10px; color: navy; font-weight: bold;">&#9679;</span><span style="display: inline-block; margin-right: 10px; color: brown; font-weight: bold;">&#9679;</span><span style="display: inline-block; margin-right: 10px; color: magenta; font-weight: bold;">&#9679;</span><span style="display: inline-block; margin-right: 10px; color: teal; font-weight: bold;">&#9679;</span><span style="display: inline-block; margin-right: 10px; color: salmon; font-weight: bold;">&#9679;</span><span style="display: inline-block; margin-right: 10px; color: violet; font-weight: bold;">&#9679;</span><span style="display: inline-block; margin-right: 10px; color: lime; font-weight: bold;">&#9679;</span><span style="display: inline-block; margin-right: 10px; color: indigo; font-weight: bold;">&#9679;</span><span style="display: inline-block; margin-right: 10px; color: silver; font-weight: bold;">&#9679;</span><span style="display: inline-block; margin-right: 10px; color: turquoise; font-weight: bold;">&#9679;</span><span style="display: inline-block; margin-right: 10px; color: maroon; font-weight: bold;">&#9679;</span></marquee>
+
+
+          
+          
+          <div class="sponser"><h3>(Music-Sponser)</h3></div>
+          <div class="track">
+              <img src="images/play.png" id="playbtn" alt="" srcset="">
+              <div id="waveform"></div>
+          </div>
+      </div>
+
+  </div>
+  
+
+
+  <script type="module">
+    
+     import WaveSurfer from 'https://unpkg.com/wavesurfer.js@beta'
+      
+      const wavesurfer = WaveSurfer.create({
+        container: '#waveform',
+  waveColor: '#ddd',
+  progressColor: '#ff006c',
+  barWidth: 4,
+  responsive: true,
+  height: 90,
+  barRadius: 4,
+  url: 'images/write this down biggie small.mp3',
+      })
+      
+      wavesurfer.on('interaction', () => {
+        wavesurfer.play()
+      })
+
+
+
+      var playbtn = document.getElementById("playbtn");
+
+playbtn.onclick = function(){
+
+wavesurfer.playPause();
+if(playbtn.src.includes("play.png")){
+   playbtn.src = "images/pause.png";
+}else{
+   playbtn.src = "images/play.png";
+}
+
+}
+
+wavesurfer.on('finish', function(){
+playbtn.src = "images/play.png";
+wavesurfer.stop();
+})
+
+        </script>
+
+
+<!-- music section ends here -->
+
+
+
+
+  <!-- Credits section -->
+  <section id="credits">
+    <h2>Credits and Thanks</h2>
+    <ul>
+      <li>
+        <a href="https://unsplash.com/s/photos/sports">Unsplash</a> - Thank you for providing valuable resources and inspiration.
+      </li>
+      <li>
+        <a href="https://chat.openai.com/">CHatgpt</a> - We appreciate your support and guidance throughout the project.
+      </li>
+      <li>
+        <a href="https://colorhunt.co/">ColorHunt</a> - Special thanks for contributing design elements to our webstore.
+      </li>
+      <li>
+        <a href="https://www.google.com/">Google</a> - We appreciate your support and guidance throughout the project.
+      </li>
+      <li>
+        <a href="https://getcssscan.com/css-box-shadow-examples">Shadowbox</a> - Special thanks for contributing design elements to our webstore.
+      </li>
+      <li>
+        <a href="https://home.openweathermap.org/users/sign_in">Openweathermap</a> - Special  thanks for providing free API's.
+      </li>
+    </ul>
+  </section> 
+
+  <!--credits section end -->
+
+
+
+
+
+
+
+
+
+     
+      <!-- !---------------------------------------------------------------------------FOOTER SECTION FROM HERE-----------------------------------------------------------------! -->
+     
+     
+      <div class="fotter">
+
+          <a href="#">Home</a>
+          <a href="#">About-us</a>
+          <a href="#">Contact</a>
+          <a href="#">Collaboration</a>
+          <a href="#">Services</a>
+          <a href="#">Team</a>
+
+
+
+      </div>
+
+      <div class="socials">
+
+
+        <a href="#" class="fa fa-facebook link"> &nbsp;  Facebook</a>
+        <a href="#" class="fa fa-instagram link">&nbsp;Instagram</a>
+        <a href="#" class="fa fa-linkedin link"> &nbsp; Linkedin</a>
+        <a href="#" class="fa fa-whatsapp link"> &nbsp; Whatsapp</a>
+        <a href="#" class="fa fa-reddit link">   &nbsp;   Reddit</a>
+
+
+
+          <h2>WEBSTORE</h2>
+
+          <span>
+              <p class="copyright"> &#169; copyright claimed by Himanshu Rawat, All rights reserved</p>
+          </span>
+      </div>
+
+      <!-- !---------------------------------------------------------------------------FOOTER SECTION TILL HERE-----------------------------------------------------------------! -->
+
+  </div>
+
+
+
+ 
+
+
+
+
+
+
+<script>
+
+  function registered(email){
+      alert("THANK YOU FOR YOUR INFO WE WON'T MISS USE IT ", email);
+  }
+
+
+//guest account  
+  // function guest(){
+
+  //    let guestname =  prompt("Enter your name to continue as a guest ,If you dont want to Signup","Ugly-Ass");
+  //     if(guestname == "Ugly-Ass"){
+  //         alert("Enter your name !It can't be blank");
+  //        setTimeout(guest,5000)
+  //        console.log(guestname);
+  //     }
+  //       else{
+  //             alert('Welcome to the website '+guestname+' ! our Guest');
+  //             console.log(guestname);
+  //     }
+
+  // }
+  // setTimeout(guest,10000);
+
+
+  //time
+// function timefun(){
+//   const d = new Date();
+//   let time = d.toLocaleString();    
+//   document.getElementById('time').innerHTML = time;
+  
+//   }
+  
+//   setInterval(timefun,1000);
+
+</script>
+
+
+
+
+  <!-- !---------------------------------------------------------------------------SCRIPTS FOR CHAT BOT FROM HERE-----------------------------------------------------------------! -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="chatbot/responses.js"></script>
+  <script src="chatbot/chat.js"></script>
+  <!-- !---------------------------------------------------------------------------SCRIPTS FOR CHATBOT TILL HERE-----------------------------------------------------------------! -->
+
+</div>
+</div>
+<script src="nav.js"></script>
+
+</body>
+
+</html>
+
+
+
+
+

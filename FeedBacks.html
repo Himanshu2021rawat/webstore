@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FeedBacks of Users</title>
+</head>
+
+
+
+
+
+<style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Recursive:wght@300&display=swap');
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: 'Recursive', sans-serif;
+        font-size: 26px;
+        color: white;
+    }
+
+    body{
+        
+        background-image: url('images/feedback.jpg');
+        background-size: cover;
+
+    }
+
+    h1{
+        text-align: center;
+        position: relative;
+        top: 100px;
+        margin-left: 90px;
+        text-decoration: underline;
+        text-decoration-color:grey ;
+        text-underline-offset: 11px;
+
+        
+    }
+    .main{
+        width: 94%;
+        height: 20%;
+        margin-top: 350px;
+        padding: 33px;
+        border: 2px solid grey;
+        border-radius: 4px;
+        margin-left: 10px;
+        
+    }
+    
+    .submain{
+        
+        font-size: 30px;
+        margin-left: 358px;
+    }
+
+    #userinput,label{
+        
+        outline: none;
+        padding: 10px;
+        height: 2em;
+        margin: 22px;
+        background-color: transparent;
+        
+    }
+
+    #selectionofcategory{
+        height: 3em;
+        margin: 22px;
+        background-color: transparent;
+
+    }
+    select option{
+        color: black;
+        
+    }
+    
+</style>
+<body>
+    
+    <h1>YOUR FEEDBACK MATTERS  </h1>
+
+    <div class="main">
+
+        <div class="submain">
+            
+            <label for="">Email:</label><input type="email" id="userinput" name="userinput">
+            <br>
+        <label for="">Choose Your Favourite Category:</label>
+        <select name="selectionofcategory" id="selectionofcategory" onchange="Inputofuser()">
+
+            <option value="">Select One...</option>
+            <option value="technology">Technology</option>
+            <option value="fashion">Fashion</option>
+            <option value="food">Food</option>
+            <option value="sports">Sports</option>
+            <option value="travel">Travel</option>
+            <option value="music">Music</option>
+            <option value="movies">Movies</option>
+            <option value="books">Books</option>
+            <option value="health">Health</option>
+            <option value="fitness">Fitness</option>
+            <option value="fitness">Entertainment</option>
+
+
+
+        </select>
+
+            </div>
+
+            <div id="result" style="text-align: center;"></div>
+    </div>
+
+
+
+    <script>
+
+const Inputofuser = ()=>{
+
+    let useremail = document.getElementById('userinput').value;
+    if(useremail == ''){
+        alert('Please give us your email ');
+
+    }
+    let uE = useremail.slice(0,5);
+    let userselect = document.getElementById('selectionofcategory').value;
+
+    console.log(`${useremail} and ${userselect}`);
+    const result = document.getElementById('result');
+    result.innerHTML = `Thanks a lot  ${uE} for selecting   ${userselect} Category and giving us your feedback`;
+
+}
+
+
+    </script>
+
+
+</body>
+</html>
